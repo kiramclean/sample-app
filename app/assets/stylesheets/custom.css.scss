@@ -1,0 +1,75 @@
+@import 'bootstrap-sprockets';
+@import 'bootstrap';
+
+/*BASE*/
+
+body {
+  padding: 60px;
+}
+
+section {
+  overflow: auto;
+}
+
+textarea {
+  resize: vertical;
+}
+
+.center {
+  text-align: center;
+
+  h1 {
+    margin-bottom: 10px;
+  }
+}
+
+/*FONT FORMATTING*/
+
+h1 {
+  letter-spacing: -2px;
+}
+
+h2 {
+  letter-spacing: -1px;
+}
+
+p {
+  font-size: 1.1em;
+}
+
+/*LOGO*/
+
+#logo {
+  font-size: 1.8em;
+  color: #555555;
+  float: left;
+  text-transform: uppercase;
+  font-weight: bold;
+  vertical-align: middle;
+  margin-top: 12px;
+
+  &:hover {
+    text-decoration: none;
+  }
+}
+
+/*FOOTER*/
+footer {
+  padding: 20px 0;
+  border-top: 1px solid #eaeaea;
+  nav {
+    float: right;
+  }
+  li {
+    display: inline;
+    list-style: none;
+    padding-left: 25px;
+  }
+  a {
+    color: #777777;
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+
+}
