@@ -66,6 +66,10 @@ p {
 }
 
 /*HEADER*/
+header {
+  background: white;
+}
+
 nav {
   float: right;
   .nav li a {
@@ -134,6 +138,21 @@ input, textarea, select, .uneditable-input {
   border: 1px solid #bbbbbb;
   width: 100%;
   margin-bottom: 15px;
+}
+
+#error_explanation {
+  color: red;
+  ul {
+    color: red;
+    margin-botom: 30px;
+  }
+}
+
+.field_with_errors {
+  @extend .has-error;
+  .form-control  {
+    color: $state-danger-text;
+  }
 }
 
 /*DEBUG BOX FOR DEVELOPMENT ENVIRONMENT*/
