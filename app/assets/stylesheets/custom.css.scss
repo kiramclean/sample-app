@@ -25,16 +25,28 @@ textarea {
 
 /*FONT FORMATTING*/
 
+h1, h2, h3, h4, h5, h6 {
+  line_height: 1;
+}
+
 h1 {
   letter-spacing: -2px;
+  font-size: 3em;
+  text-align: center;
+  margin-bottom: 30px;
 }
 
 h2 {
   letter-spacing: -1px;
+  font-size: 1.2em;
+  margin-bottom: 30px;
+  text-align: center;
+  font-weight: normal;
 }
 
 p {
   font-size: 1.1em;
+  line-height: 1.7em;
 }
 
 /*LOGO*/
@@ -46,16 +58,59 @@ p {
   text-transform: uppercase;
   font-weight: bold;
   vertical-align: middle;
-  margin-top: 12px;
+  margin: 12px 10px 0 0;
 
   &:hover {
     text-decoration: none;
   }
 }
 
+/*HEADER*/
+nav {
+  float: right;
+  .nav li a {
+    float: left;
+    display: inline;
+  }
+}
+
+/*SIDEBAR*/
+aside {
+  section.user_info{
+    margin-top: 20px;
+  }
+  section {
+    padding: 10px 0;
+    margin-top: 20px;
+    &:first-child {
+      border: 0;
+      padding-top: 0;
+    }
+    span {
+      display: block;
+      margin-bottom: 3px;
+    }
+    h1 {
+      font-size: 1.4em;
+      text-align: left;
+      letter-spacing: -1px;
+    }
+  }
+}
+
+.gravatar {
+  float: left;
+  margin-right: 10px;
+}
+
+.gravatar_edit {
+  margin-top: 15px;
+}
+
 /*FOOTER*/
 footer {
   padding: 20px 0;
+  margin: 20px 0;
   border-top: 1px solid #eaeaea;
   nav {
     float: right;
@@ -71,5 +126,18 @@ footer {
       text-decoration: underline;
     }
   }
+}
 
+/*FORMS*/
+
+input, textarea, select, .uneditable-input {
+  border: 1px solid #bbbbbb;
+  width: 100%;
+  margin-bottom: 15px;
+}
+
+/*DEBUG BOX FOR DEVELOPMENT ENVIRONMENT*/
+.debug_dump {;
+  width: 100%;
+  margin-top: 45px;
 }
