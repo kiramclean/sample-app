@@ -29,4 +29,13 @@ class UsersIndexTest < ActionDispatch::IntegrationTest
     get users_path
     assert_select 'a', text: 'delete', count: 0
   end
+
+  test 'do not show unactivated users' do
+    log_in_as(@admin)
+    get users_path
+    assert_select 'a', count: 1, text: @non_admin.name
+    @non_admin.toggle!(:activated)
+    get users_path
+    assert_select 'a', count: 0, text: @non_admin.name
+  end
 end
