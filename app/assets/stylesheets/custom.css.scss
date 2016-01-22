@@ -100,11 +100,10 @@ aside {
       letter-spacing: -1px;
     }
   }
-}
-
-.gravatar {
-  float: left;
-  margin-right: 10px;
+  .gravatar {
+    float: left;
+    margin-right: 10px;
+  }
 }
 
 .gravatar_edit {
@@ -159,7 +158,7 @@ input, textarea, select, .uneditable-input {
   margin-bottom: 10px;
 }
 
-/*DEBUG BOX FOR DEVELOPMENT ENVIRONMENT*/
+/* DEBUG BOX FOR DEVELOPMENT ENVIRONMENT */
 .debug_dump {
   width: 100%;
   margin-top: 45px;
@@ -173,5 +172,70 @@ input, textarea, select, .uneditable-input {
     overflow: auto;
     padding: 10px 0;
     border-bottom: 1px solid $gray-lighter;
+  }
+}
+
+/* MICROPOSTS */
+
+.microposts {
+  list-style: none;
+  padding: 0;
+  li {
+    padding: 10px 0;
+    border-top: 1px solid #e8e8e8;
+  }
+  .gravatar {
+    float: left;
+    margin-right: 10px;
+    height: 60px;
+  }
+}
+
+.user {
+  margin-top: 5em;
+  padding: 0;
+}
+
+.content {
+  display: block;
+  margin-left: 60px;
+  img {
+    display: block;
+    padding: 5px 0;
+  }
+}
+
+.timestamp {
+  color: $gray-light;
+  display: block;
+  margin-left: 60px;
+  font-size: small;
+}
+
+aside {
+  textarea {
+    height: 100px;
+    margin-bottom: 5px;
+  }
+}
+
+span.picture {
+  margin-top: 10px;
+  input {
+    border: 0;
+  }
+}
+
+.user_info {
+  h1 {
+    padding: 0;
+    margin: 0;
+  }
+  > span {
+    font-size: small;
+    padding: 0;
+    margin: 0;
+    position: relative;
+    left: 3px;
   }
 }

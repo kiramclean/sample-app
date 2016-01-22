@@ -3,7 +3,8 @@ require 'test_helper'
 class UserTest < ActiveSupport::TestCase
   def setup
     @user = User.new(name: 'Test User', email: 'user@test.com',
-                     password: 'foobar', password_confirmation: 'foobar')
+                     password: 'foobar', password_confirmation: 'foobar',
+                     activated: true)
   end
 
   test 'authenticated? should return false for a user with nil digest' do
@@ -72,5 +73,13 @@ class UserTest < ActiveSupport::TestCase
   test 'password should have minimum length of six' do
     @user.password = @user.password_confirmation = 'a' * 5
     assert_not @user.valid?
+  end
+
+  test 'associated microposts should be destroyed' do
+    @user.save
+    @user.microposts.create!(content: 'Lorem ipsum')
+    assert_difference 'Micropost.count', -1 do
+      @user.destroy
+    end
   end
 end
