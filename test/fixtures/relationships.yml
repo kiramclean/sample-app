@@ -1,0 +1,15 @@
+one:
+  follower: kira
+  followed: lana
+
+two:
+  follower: kira
+  followed: malory
+
+three:
+  follower: lana
+  followed: kira
+
+four:
+  follower: mike
+  followed: kira
