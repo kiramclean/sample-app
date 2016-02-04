@@ -7,10 +7,6 @@ body {
   padding: 60px;
 }
 
-section {
-  overflow: auto;
-}
-
 textarea {
   resize: vertical;
 }
@@ -117,7 +113,6 @@ aside {
 }
 
 .stats {
-  overflow: auto;
   margin-bottom: 15px;
   padding: 0;
   a {
@@ -207,7 +202,6 @@ input, textarea, select, .uneditable-input {
   list-style: none;
   margin: 0;
   li {
-    overflow: auto;
     padding: 10px 0;
     border-bottom: 1px solid $gray-lighter;
   }
